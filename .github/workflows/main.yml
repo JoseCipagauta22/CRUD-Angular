@@ -7,7 +7,9 @@ jobs:
 
   dev:
     runs-on: ubuntu-latest
-    environment: dev
+    environment: 
+      name: dev
+      url: https://dev.myapp.com
     steps:
       - name: deploy
         uses: actions/checkout@v2
