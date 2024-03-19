@@ -11,6 +11,7 @@ jobs:
       name: dev
       url: https://dev.myapp.com
     steps:
+      - uses: actions/checkout@v2
       - name: deploy
-        uses: actions/checkout@v2
+        run: echo hello word
       
