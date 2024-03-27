@@ -12,5 +12,5 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: deploy
-        run: build
+        run: ng build --output-path docs --base-href /CRUD-Angular/
       
