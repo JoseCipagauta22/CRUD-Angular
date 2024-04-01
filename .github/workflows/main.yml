@@ -12,5 +12,5 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: deploy
-        run: npm build --output-path docs --base-href /CRUD-Angular/
+        run: npm install && npm run build 
       
