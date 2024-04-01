@@ -10,5 +10,5 @@ jobs:
       - uses: actions/checkout@v2
       - name: deploy
         working-directory: ./CRUD-Angular
-        run: npm install && npm run build 
+        run: npm install && npm run build && cp dist/test/index.html
       
