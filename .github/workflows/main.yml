@@ -9,6 +9,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: deploy
-        working-directory: ./CRUD-Angular
+        working-directory: ./ANGULAR_CRUD
         run: npm install && npm run build && cp dist/test/index.html
       
