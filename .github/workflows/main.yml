@@ -4,13 +4,11 @@ on:
   workflow_dispatch:
 
 jobs:
-  dev:
+  build:
     runs-on: ubuntu-latest
-    environment: 
-      name: dev
-      url: https://dev.myapp.com
     steps:
       - uses: actions/checkout@v2
       - name: deploy
+        working-directory: ./CRUD-Angular
         run: npm install && npm run build 
       
