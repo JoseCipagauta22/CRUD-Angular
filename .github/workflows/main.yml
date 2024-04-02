@@ -1,31 +1,19 @@
-name: GitHub Pages
+name: Manual workflow
 
 on:
   push:
     branches:
-    - main
-
+      -main
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
+    
     steps:
-    - name: Checkout
-      uses: actions/checkout@v3
+      - uses: actions/checkout@v2
+      - name: Install Dependencies
+        run: npm install
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: 20.11.0
-
-    - name: Install dependencies
-      run: npm install
-
-    - name: Build
-      run: npm run build
-
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        publish_dir: dist/angular-github-actions
+      - name: Build Angular App
+        run: npm run build --base-href /CRUD-Angular/
 
       
